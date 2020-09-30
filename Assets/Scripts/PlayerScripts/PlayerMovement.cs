@@ -11,7 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpSpeed = 5f;
     public Animator anim;
     float turnSmoothVelocity;
-    Rigidbody rb;
+    private float gravityValue = -9.81f;
+    private Vector3 playerVelocity;
 
     enum States
     {
@@ -24,18 +25,34 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     States playerState = States.Idle;
 
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
+    [SerializeField]
+    private bool groundedPlayer;
 
+    [SerializeField]
+    Transform foot;
+
+    [SerializeField]
+    float groundRadius = 0.3f;
+
+    [SerializeField]
+    AudioClip jump;
     void Update()
     {
+        groundedPlayer = GroundCheck();
 
-        if (!IsJump())
-            PlayerMove();
+        if (groundedPlayer && playerVelocity.y < 0)
+        {
+            playerVelocity.y = 0f;
+        }
+
+
+        PlayerJump();
         PlayerAttack();
         SwitchAnimation();
+        PlayerMove();
+
+        playerVelocity.y += gravityValue * Time.deltaTime;
+        controller.Move(playerVelocity * Time.deltaTime);
     }
 
     void PlayerMove()
@@ -61,15 +78,15 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    bool IsJump()
+    void PlayerJump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && groundedPlayer)
         {
             playerState = States.Jump;
-            rb.AddForce(Vector3.up * jumpSpeed, ForceMode.Impulse);
-            return true;
+            playerVelocity.y += Mathf.Sqrt(jumpSpeed * -3.0f * gravityValue);
+            GetComponent<AudioSource>().clip = jump;
+            GetComponent<AudioSource>().Play();
         }
-        return false;
     }
 
     void PlayerAttack()
@@ -99,5 +116,15 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
+    }
+
+    bool GroundCheck()
+    {
+        return Physics.CheckSphere(foot.position, groundRadius, LayerMask.GetMask("Ground"), QueryTriggerInteraction.Ignore);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(foot.position, groundRadius);
     }
 }
