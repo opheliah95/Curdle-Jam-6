@@ -450,7 +450,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 351189160}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05564397, y: 6.07, z: -7.233853}
+  m_LocalPosition: {x: 29.5, y: 6.51, z: -7.233853}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1073727784}
@@ -518,7 +518,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364327092}
   m_LocalRotation: {x: -0, y: -0.0055494606, z: -0, w: 0.9999846}
-  m_LocalPosition: {x: 0.05564397, y: 1.07, z: -0.23385307}
+  m_LocalPosition: {x: 29.5, y: 1.51, z: -0.23385307}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 484748831}
@@ -961,8 +961,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3.43
+  m_Color: {r: 1, g: 0.6839622, b: 0.7658157, a: 1}
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1001,7 +1001,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -1115,7 +1115,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818548370}
-  m_LocalRotation: {x: 0.28780517, y: 0.000000016478362, z: -0.000000004952085, w: 0.957689}
+  m_LocalRotation: {x: 0.28780517, y: -1e-45, z: -0, w: 0.957689}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1308,8 +1308,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.28780523, y: 0.000000016478364, z: -0.0000000049520867, w: 0.957689}
-  m_LocalPosition: {x: 0.05564397, y: 6.07, z: -7.233853}
+  m_LocalRotation: {x: 0.28780523, y: 0, z: 0, w: 0.957689}
+  m_LocalPosition: {x: 29.5, y: 6.51, z: -7.233853}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1941,13 +1941,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1.56
-  m_Radius: 0.6
+  m_Height: 2.35
+  m_Radius: 0.56
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 1
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &3465442147767194653
 MonoBehaviour:
   m_ObjectHideFlags: 0
