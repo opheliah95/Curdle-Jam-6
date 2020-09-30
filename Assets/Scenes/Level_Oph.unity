@@ -189,7 +189,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 34648453}
-  m_LocalRotation: {x: 0.27038392, y: -0.00000001414942, z: 0.0000000039737893, w: 0.9627526}
+  m_LocalRotation: {x: 0.27038392, y: -3.168189e-17, z: -1.5867335e-15, w: 0.9627526}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -991,7 +991,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.2987e-41, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 3.0156e-41, z: 0, w: 9.403955e-38}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1099,7 +1099,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818548370}
-  m_LocalRotation: {x: 0.28780517, y: -2.3906094e-29, z: 2.4217943e-30, w: 0.957689}
+  m_LocalRotation: {x: 0.28780517, y: 0.000000011822215, z: -0.0000000035528187, w: 0.957689}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1322,7 +1322,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.28780523, y: 0, z: 0, w: 0.957689}
+  m_LocalRotation: {x: 0.28780523, y: 0.000000011822216, z: -0.0000000035528187, w: 0.957689}
   m_LocalPosition: {x: 29.501, y: 6.488, z: -7.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1429,8 +1429,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1073727782}
-  m_LocalRotation: {x: 0.3051774, y: 8.01847e-23, z: -4.4945612e-23, w: 0.95229554}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.37624514, y: 0.000000026236664, z: -0.000000010654293, w: 0.92652017}
+  m_LocalPosition: {x: 0, y: 1.7378063, z: 0.07198715}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1612998916}
@@ -2112,6 +2112,7 @@ MonoBehaviour:
   foot: {fileID: 821027328}
   groundRadius: 0.2
   jump: {fileID: 8300000, guid: 27c35e7b227d3e54da753b3dbed51674, type: 3}
+  charge: {fileID: 8300000, guid: 27c8fe32bc78b824b847298f7b3ba656, type: 3}
 --- !u!4 &3478493982932958288
 Transform:
   m_ObjectHideFlags: 0

@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     float groundRadius = 0.3f;
 
     [SerializeField]
-    AudioClip jump;
+    AudioClip jump, charge;
     void Update()
     {
         groundedPlayer = GroundCheck();
@@ -92,7 +92,12 @@ public class PlayerMovement : MonoBehaviour
     void PlayerAttack()
     {
         if (Input.GetKeyDown(KeyCode.X))
+        {
             playerState = States.Attack;
+            GetComponent<AudioSource>().clip = charge;
+            GetComponent<AudioSource>().Play();
+        }
+            
     }
 
     void SwitchAnimation()
